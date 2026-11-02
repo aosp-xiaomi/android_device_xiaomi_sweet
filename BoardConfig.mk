@@ -13,7 +13,7 @@ DEVICE_PATH := device/xiaomi/sweet
 TARGET_OTA_ASSERT_DEVICE := sweet,sweetin
 
 # Audio
-TARGET_PROVIDES_AUDIO_EXTNS := true
+$(call soong_config_set,qtiaudio,feature_ultrasound,true)
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml

@@ -68,21 +68,12 @@ vendor/firmware/aw8624_rtp.bin
 vendor/firmware/osc_rtp_24K_5s.bin
 
 # Audio HAL
-vendor/lib/hw/audio.primary.sm6150.so
-vendor/lib/vndk/libxlog.so
 vendor/lib/libadm.so
-vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioparsers.so
-vendor/lib/libaudioroute_ext.so
 vendor/lib/libqtigef.so
 
 # Audio extensions
 vendor/lib/btaudio_offload_if.so
-vendor/lib/liba2dpoffload.so
-vendor/lib/libhdmiedid.so
-vendor/lib/libhfp.so
-vendor/lib/libsndmonitor.so
-vendor/lib/libspkrprot.so
 
 # Batterysecret
 vendor/bin/batterysecret
@@ -407,10 +398,7 @@ vendor/etc/sensors/judge_calibrated.json
 vendor/etc/sensors/sns_reg_config
 
 # Sensors Ultrasound
-vendor/etc/elliptic_sensor.xml
-vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/libultrasound.so
-vendor/lib64/sensors.elliptic.so
 vendor/lib64/sensors.mius.proximity.so
 
 # Thermal
