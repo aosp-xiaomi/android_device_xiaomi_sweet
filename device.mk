@@ -15,6 +15,14 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
 PRODUCT_PACKAGES += \
+    audio.primary.sm6150 \
+    liba2dpoffload \
+    libbatterylistener \
+    libcomprcapture \
+    libhdmiedid \
+    libhfp \
+    libsndmonitor \
+    libspkrprot \
     sku_sweet_audio_symlink
 
 PRODUCT_COPY_FILES += \
