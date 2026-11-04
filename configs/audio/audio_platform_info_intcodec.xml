@@ -121,6 +121,15 @@
         <device name="SND_DEVICE_OUT_BT_A2DP" acdb_id="10012"/>
         <device name="SND_DEVICE_OUT_GAME_USB_HEADSET" acdb_id="10022"/>
         <device name="SND_DEVICE_OUT_USB_HEADPHONES" acdb_id="10012"/>
+        <!-- Camcorder: stock HAL records on Xiaomi "camcorder-dmic" (ACDB 10010) -->
+        <device name="SND_DEVICE_IN_HANDSET_DMIC_STEREO" acdb_id="10010"/>
+        <device name="SND_DEVICE_IN_SPEAKER_DMIC_STEREO" acdb_id="10010"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_LANDSCAPE" acdb_id="10010"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_INVERT_LANDSCAPE" acdb_id="10010"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_PORTRAIT" acdb_id="10010"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_SELFIE_LANDSCAPE" acdb_id="10010"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE" acdb_id="10010"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_SELFIE_PORTRAIT" acdb_id="10010"/>
     </acdb_ids>
     <module_ids>
         <aec>
