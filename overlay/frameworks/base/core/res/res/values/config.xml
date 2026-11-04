@@ -247,6 +247,40 @@
     <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
 
+    <!-- Ambient lux hysteresis, from stock MIUI (FrameworksResTarget.apk).
+         Values are in 1/1000 of the current ambient lux. -->
+    <integer-array name="config_ambientThresholdLevels">
+        <item>2</item>
+        <item>10</item>
+        <item>30</item>
+        <item>100</item>
+        <item>800</item>
+        <item>2000</item>
+        <item>4000</item>
+    </integer-array>
+
+    <integer-array name="config_ambientBrighteningThresholds">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>100</item>
+        <item>400</item>
+        <item>600</item>
+        <item>1000</item>
+    </integer-array>
+
+    <integer-array name="config_ambientDarkeningThresholds">
+        <item>800</item>
+        <item>800</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+    </integer-array>
+
     <!-- Minimum screen brightness setting allowed by the power manager.
         The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">2</integer>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Installed to /vendor/etc/displayconfig/. Panel id matches
+     persist.vendor.fingerprint.sensor_location in vendor.prop.
+     Light-sensor horizons are copied from stock MIUI (product/etc/displayconfig).
+     The brightness map is the sweet overlay's existing
+     config_screenBrightnessBacklight / config_screenBrightnessNits, converted
+     with AOSP's (backlight - 1) / 254. The first point has to be at or below
+     the minimum backlight (config_screenBrightnessSettingMinimum = 2, i.e.
+     1/254), or DisplayDeviceConfig throws and system_server crashes. -->
+<displayConfiguration>
+    <screenBrightnessMap>
+        <point>
+            <value>0.003000000</value>
+            <nits>2.0</nits>
+        </point>
+        <point>
+            <value>0.007874016</value>
+            <nits>4.0</nits>
+        </point>
+        <point>
+            <value>0.035433071</value>
+            <nits>22.0</nits>
+        </point>
+        <point>
+            <value>0.055118110</value>
+            <nits>30.0</nits>
+        </point>
+        <point>
+            <value>0.114173228</value>
+            <nits>68.0</nits>
+        </point>
+        <point>
+            <value>0.173228346</value>
+            <nits>95.0</nits>
+        </point>
+        <point>
+            <value>0.232283465</value>
+            <nits>133.0</nits>
+        </point>
+        <point>
+            <value>0.291338583</value>
+            <nits>165.0</nits>
+        </point>
+        <point>
+            <value>0.350393701</value>
+            <nits>192.0</nits>
+        </point>
+        <point>
+            <value>0.409448819</value>
+            <nits>218.0</nits>
+        </point>
+        <point>
+            <value>0.468503937</value>
+            <nits>255.0</nits>
+        </point>
+        <point>
+            <value>0.527559055</value>
+            <nits>290.0</nits>
+        </point>
+        <point>
+            <value>0.586614173</value>
+            <nits>326.0</nits>
+        </point>
+        <point>
+            <value>0.645669291</value>
+            <nits>352.0</nits>
+        </point>
+        <point>
+            <value>0.704724409</value>
+            <nits>384.0</nits>
+        </point>
+        <point>
+            <value>0.763779528</value>
+            <nits>399.0</nits>
+        </point>
+        <point>
+            <value>0.822834646</value>
+            <nits>422.0</nits>
+        </point>
+        <point>
+            <value>0.881889764</value>
+            <nits>432.0</nits>
+        </point>
+        <point>
+            <value>0.940944882</value>
+            <nits>442.0</nits>
+        </point>
+        <point>
+            <value>1.000000000</value>
+            <nits>455.0</nits>
+        </point>
+    </screenBrightnessMap>
+    <ambientLightHorizonLong>3000</ambientLightHorizonLong>
+    <ambientLightHorizonShort>1000</ambientLightHorizonShort>
+</displayConfiguration>
