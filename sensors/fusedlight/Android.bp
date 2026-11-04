@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: Apache-2.0
+
+cc_library_shared {
+    name: "sensors.ssc_fusedlight",
+    vendor: true,
+    srcs: ["FusedLight.cpp"],
+    cflags: ["-Wall", "-Werror", "-Wno-missing-field-initializers"],
+    header_libs: ["libhardware_headers"],
+    shared_libs: [
+        "libcutils",
+        "libdl",
+        "liblog",
+    ],
+}
