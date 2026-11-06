@@ -300,7 +300,7 @@ int wClose(hw_device_t* dev) {
 
 bool loadInner() {
     if (gInnerModule) return true;
-    void* h = dlopen(kInnerLib, RTLD_NOW);
+    void* h = dlopen(kInnerLib, RTLD_LAZY);  // same flags the multi-HAL uses
     if (!h) {
         ALOGE("dlopen %s failed: %s", kInnerLib, dlerror());
         return false;
@@ -330,10 +330,12 @@ int wGetSensorsList(sensors_module_t* /*m*/, sensor_t const** list) {
 
 int wOpen(const hw_module_t* /*module*/, const char* id, hw_device_t** device) {
     if (!loadInner()) return -ENODEV;
-    if (gState.frontHandle < 0 && gState.backHandle < 0) {
-        sensor_t const* list;
-        wGetSensorsList(nullptr, &list);
-    }
+    // Do NOT call get_sensors_list() here. sensors.ssc.so initializes on its
+    // first get_sensors_list(); doing that from open(), on the service's main
+    // thread before the device is open, makes every SSC attribute request
+    // time out ("retrieve_attributes ... pending = 28") and the HAL reports
+    // zero sensors. Keep the stock order: open first, list later (the
+    // multi-HAL asks for the list itself, which fills in our handles).
     hw_device_t* innerDev = nullptr;
     int ret = gInnerModule->common.methods->open(&gInnerModule->common, id, &innerDev);
     if (ret) return ret;
